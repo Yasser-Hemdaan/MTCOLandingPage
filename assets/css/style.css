@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Tajwaal;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-Light.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-Regular.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-ExtraBold.ttf);
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Tajwaal;
+  src: url(../fonts/Tajawal-Black.ttf);
+  font-weight: 1000;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+img,
+video {
+  pointer-events: none;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  background-image: url(../images/logo.png);
+  background-size: cover;
+  background-repeat: repeat-y;
+  filter: blur(50px);
+  background-color: #3b477b;
+}
+
+.card {
+  max-width: 640px;
+  /* overflow: hidden; */
+  margin: auto !important;
+  padding: 12.5px 0 !important;
+}
+
+.card-image {
+  width: 100%;
+  height: 75px;
+  background-color: #3b477b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-image img {
+  width: 150px;
+}
+
+.card-video video {
+  width: 100%;
+  margin: auto;
+}
+
+.card-video {
+  position: relative;
+}
+
+.card-video:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -5px;
+  left: 0;
+  background-color: #bb9d5a;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    margin: 0;
+    padding: 0 !important;
+  }
+}
+
+.card-links ul {
+  width: 100%;
+}
+
+.card-links ul .list-item {
+  position: relative;
+  background-color: rgb(250, 250, 250);
+}
+
+.card-links ul .list-item:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: #455a64;
+  z-index: 999;
+}
+
+.card-links ul .list-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12.5px;
+  padding: 25px 15px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.card-links ul .list-item:hover a {
+  background-color: rgba(128, 128, 128, 0.25);
+}
+
+.card-links ul .list-item a .item-icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b477b;
+}
+
+/* .card-links ul .list-item a .item-icon.website {
+  background-color: #455a64;
+}
+
+.card-links ul .list-item a .item-icon.Location {
+  background-color: #ffa000;
+}
+
+.card-links ul .list-item a .item-icon.Facebook {
+  background-color: #0d47a1;
+}
+
+.card-links ul .list-item a .item-icon.LinkedIn {
+  background-color: #0d47a1;
+}
+
+.card-links ul .list-item a .item-icon.Twitter {
+  background-color: #03a9f4;
+}
+
+.card-links ul .list-item a .item-icon.Instagram {
+  background-color: #e91e63;
+}
+
+.card-links ul .list-item a .item-icon.YouTube {
+  background-color: #d50000;
+} */
+
+.card-links ul .list-item a .item-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-links ul .list-item a .item-info span {
+  color: black;
+  font-size: 18px;
+  line-height: 17.5px;
+}
+
+.card-links ul .list-item a .item-info p {
+  color: black;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+}
